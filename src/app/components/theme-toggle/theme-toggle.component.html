@@ -1,0 +1,3 @@
+<button class="btn btn-link text-decoration-none" (click)="toggleTheme()">
+  <fa-icon [icon]="(isDarkTheme$ | async) ? faSun : faMoon" [styles]="{'color': 'var(--text-color)'}"></fa-icon>
+</button>

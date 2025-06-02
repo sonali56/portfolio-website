@@ -1,0 +1,146 @@
+<div class="home-container">
+  <!-- Fixed Navigation Menu -->
+  <nav class="fixed-nav">
+    <div class="nav-content">
+      <div class="nav-brand">
+        <h1>Sonali D.</h1>
+      </div>
+      <div class="nav-menu">
+        <a href="#hero" class="menu-item" [class.active]="activeSection === 'hero'">
+          Home
+        </a>
+        <a href="#about" class="menu-item" [class.active]="activeSection === 'about'">
+          About
+        </a>
+        <a href="#experience" class="menu-item" [class.active]="activeSection === 'experience'">
+          Experience
+        </a>
+        <a href="#projects" class="menu-item" [class.active]="activeSection === 'projects'">
+          Projects
+        </a>
+        <a href="#contact" class="menu-item" [class.active]="activeSection === 'contact'">
+          Contact
+        </a>
+      </div>
+      <div class="nav-actions">
+        <app-theme-toggle></app-theme-toggle>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Hero Section -->
+    <section id="hero" class="section hero-section text-center">
+      <div class="profile-container">
+        <div class="profile-image-container">
+          <img src="assets/picofme (14).png" alt="Profile Picture" class="profile-image">
+        </div>
+      </div>
+      <h1 class="display-4 mb-3">Hi, I'm Sonali Dholam</h1>
+      <div class="typed-container mb-4">
+        <span>I'm a </span>
+        <span id="typed-text"></span>
+      </div>
+      <p class="lead mb-5">
+        Software Engineer at Persistent Systems, passionate about creating modern web applications
+      </p>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+      <app-about></app-about>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section experience-section">
+      <h2 class="section-title">Experience</h2>
+      <app-experience></app-experience>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects-section">
+      <h2 class="section-title">Projects</h2>
+      <app-projects></app-projects>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+      <h2 class="section-title">Contact Me</h2>
+      <div class="contact-container">
+        <!-- Contact Form -->
+        <div class="contact-form">
+          <h3>Send Me a Message</h3>
+          <form (ngSubmit)="onSubmit()" #contactForm="ngForm">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input 
+                type="text" 
+                id="name" 
+                name="name" 
+                [(ngModel)]="contactData.name" 
+                required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                [(ngModel)]="contactData.email" 
+                required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea 
+                id="message" 
+                name="message" 
+                [(ngModel)]="contactData.message" 
+                required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Send Message</button>
+          </form>
+        </div>
+
+        <!-- Social Links -->
+        <div class="social-links">
+          <h3>Connect With Me</h3>
+          <div class="social-list">
+            <a href="https://www.linkedin.com/in/sonali-dholam-fullstackdeveloper/" 
+               target="_blank" 
+               class="social-item">
+              <fa-icon [icon]="faLinkedin" class="icon"></fa-icon>
+              <div>
+                <div class="label">LinkedIn</div>
+                <div class="description">Let's connect professionally</div>
+              </div>
+            </a>
+            <a href="https://github.com/sonali-dholam" 
+               target="_blank" 
+               class="social-item">
+              <fa-icon [icon]="faGithub" class="icon"></fa-icon>
+              <div>
+                <div class="label">GitHub</div>
+                <div class="description">Check out my code</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Wave Divider -->
+    <div class="wave-divider">
+      <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+        <path fill="currentColor" d="M0,40 C280,100 660,0 1440,50 L1440,100 L0,100 Z"></path>
+      </svg>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        &copy; 2024 Sonali Dholam. Built with 💙 and Angular.
+      </div>
+    </footer>
+  </main>
+</div>

@@ -1,0 +1,10 @@
+<div class="social-icons">
+  <a *ngFor="let link of socialLinks" 
+     [href]="link.url" 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     class="social-icon mx-2"
+     [attr.aria-label]="link.label">
+    <fa-icon [icon]="link.icon" size="lg"></fa-icon>
+  </a>
+</div>

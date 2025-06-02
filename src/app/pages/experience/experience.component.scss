@@ -1,0 +1,97 @@
+.tech-expertise {
+  padding: 4rem 0;
+  
+  .section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+
+    .icon {
+      margin-right: 0.5rem;
+    }
+  }
+}
+
+.tech-category {
+  margin-bottom: 3rem;
+
+  .category-title {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+
+    .category-icon {
+      color: var(--primary-color);
+      font-size: 1.25rem;
+    }
+  }
+}
+
+.tech-bubbles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: flex-start;
+}
+
+.tech-bubble {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  background: rgba(var(--card-background-rgb), 0.5);
+  border: 1px solid rgba(var(--primary-color-rgb), 0.1);
+  backdrop-filter: blur(10px);
+  font-size: 0.9rem;
+  color: var(--text-color);
+  transition: all 0.3s ease;
+  cursor: default;
+
+  .tech-icon {
+    width: 1.2rem;
+    height: 1.2rem;
+    color: var(--primary-color);
+  }
+
+  img.tech-icon {
+    object-fit: contain;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    background: rgba(var(--primary-color-rgb), 0.1);
+    border-color: var(--primary-color);
+    box-shadow: 0 5px 15px rgba(var(--primary-color-rgb), 0.2);
+
+    .tech-icon {
+      transform: scale(1.1);
+    }
+  }
+}
+
+// Add animation for staggered entry
+@media (prefers-reduced-motion: no-preference) {
+  .tech-bubble {
+    animation: bubbleIn 0.5s ease-out backwards;
+  }
+
+  @for $i from 1 through 20 {
+    .tech-bubble:nth-child(#{$i}) {
+      animation-delay: #{$i * 0.1}s;
+    }
+  }
+}
+
+@keyframes bubbleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}

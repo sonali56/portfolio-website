@@ -1,0 +1,101 @@
+<section id="about" class="section about-section">
+  <div class="about-container">
+    <div class="about-header">
+      <h2 class="section-title">About Me</h2>
+      <div class="section-subtitle">Full Stack Developer</div>
+    </div>
+    
+    <div class="about-grid">
+      <!-- Personal Info -->
+      <div class="about-info">
+        <div class="info-card">
+          <div class="card-header">
+            <fa-icon [icon]="faUser" class="header-icon"></fa-icon>
+            <h3>Who I Am</h3>
+          </div>
+          <div class="card-content">
+            <div class="typed-container">
+              <span id="typed-about"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- What I Do -->
+      <div class="about-what-i-do">
+        <div class="info-card">
+          <div class="card-header">
+            <fa-icon [icon]="faLaptopCode" class="header-icon"></fa-icon>
+            <h3>What I Do</h3>
+          </div>
+          <div class="card-content">
+            <ul class="specialty-list">
+              <li>
+                <fa-icon [icon]="faCheck" class="list-icon"></fa-icon>
+                <span>Develop full-stack web applications</span>
+              </li>
+              <li>
+                <fa-icon [icon]="faCheck" class="list-icon"></fa-icon>
+                <span>Create responsive and intuitive UIs</span>
+              </li>
+              <li>
+                <fa-icon [icon]="faCheck" class="list-icon"></fa-icon>
+                <span>Design and implement RESTful APIs</span>
+              </li>
+              <li>
+                <fa-icon [icon]="faCheck" class="list-icon"></fa-icon>
+                <span>Optimize application performance</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Skills Section -->
+    <div class="skills-section">
+      <h3 class="skills-title">Technical Expertise</h3>
+      <div class="skills-container">
+        <div class="skill-category" *ngFor="let category of skillCategories">
+          <div class="category-header">
+            <fa-icon [icon]="category.icon" class="category-icon"></fa-icon>
+            <h4>{{category.name}}</h4>
+          </div>
+          <div class="skills-grid">
+            <div class="skill-item" *ngFor="let skill of category.skills">
+              <div class="skill-info">
+                <fa-icon [icon]="skill.icon" class="skill-icon"></fa-icon>
+                <span class="skill-name">{{skill.name}}</span>
+              </div>
+              <div class="skill-level">
+                <div class="progress-bar" [style.width]="skill.level + '%'">
+                  <span class="progress-text">{{skill.level}}%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats Section -->
+    <div class="stats-section">
+      <div class="stat-item">
+        <div class="stat-number">2+</div>
+        <div class="stat-label">Years Experience</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">20+</div>
+        <div class="stat-label">Projects Completed</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">10+</div>
+        <div class="stat-label">Technologies</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">100%</div>
+        <div class="stat-label">Client Satisfaction</div>
+      </div>
+    </div>
+  </div>
+</section>
