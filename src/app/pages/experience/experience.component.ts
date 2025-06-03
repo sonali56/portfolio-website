@@ -13,23 +13,26 @@ import { faBriefcase, faGraduationCap, faCertificate, faCode, faServer, faTools 
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class ExperienceComponent {
-  faBriefcase = faBriefcase;
-  faGraduationCap = faGraduationCap;
-  faCertificate = faCertificate;
-    // Tech stack icons
-    faAngular = faAngular;
-    faReact = faReact;
-    faHtml5 = faHtml5;
-    faCss3 = faCss3;
-    faSass = faSass;
-    faJs = faJs;
-    faNodeJs = faNodeJs;
-    faNpm = faNpm;
-    faGitAlt = faGitAlt;
-    faCode = faCode;
-    faServer = faServer;
-    faTools = faTools;
+  // FontAwesome icons for work experience and education
+  faBriefcase = faBriefcase; // Icon for work experience
+  faGraduationCap = faGraduationCap; // Icon for education
+  faCertificate = faCertificate; // Icon for certifications
 
+  // FontAwesome icons for tech stack
+  faAngular = faAngular; // Angular icon
+  faReact = faReact; // React icon
+  faHtml5 = faHtml5; // HTML5 icon
+  faCss3 = faCss3; // CSS3 icon
+  faSass = faSass; // Sass icon
+  faJs = faJs; // JavaScript icon
+  faNodeJs = faNodeJs; // Node.js icon
+  faNpm = faNpm; // NPM icon
+  faGitAlt = faGitAlt; // Git icon
+  faCode = faCode; // Code icon
+  faServer = faServer; // Server icon
+  faTools = faTools; // Tools icon
+
+  // Array to store work experience details
   workExperience = [
     {
       title: 'Frontend Developer',
@@ -53,6 +56,7 @@ export class ExperienceComponent {
     }
   ];
 
+  // Array to store education details
   education = [
     {
       degree: 'Bachelor of Engineering in Computer Science',
@@ -62,6 +66,7 @@ export class ExperienceComponent {
     }
   ];
 
+  // Array to store certification details
   certifications = [
     {
       name: 'Angular Development',
